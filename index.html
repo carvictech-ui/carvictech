@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CarVic Tech</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#0b1220;color:#fff}
+header{background:linear-gradient(90deg,#0a58ca,#00b4ff);padding:60px 20px;text-align:center}
+nav{position:sticky;top:0;background:#111;padding:10px;text-align:center}
+nav a{color:#fff;text-decoration:none;margin:0 12px}
+section{max-width:1100px;margin:auto;padding:50px 20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:#182235;border-radius:12px;padding:18px;transition:.3s}
+.card:hover{transform:translateY(-6px)}
+footer{background:#111;padding:20px;text-align:center}
+.btn{display:inline-block;background:#00c853;color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none}
+.dark{position:fixed;right:20px;bottom:20px;padding:10px 14px;border:none;border-radius:8px}
+.light{background:#f5f5f5;color:#111}
+</style>
+</head>
+<body>
+<nav>
+<a href="#sobre">Sobre</a>
+<a href="#servicos">Serviços</a>
+<a href="#contato">Contato</a>
+</nav>
+<header>
+<h1>CarVic Tech</h1>
+<p>Tecnologia que você pode confiar.</p>
+<a class="btn" href="https://wa.me/5531990717419" target="_blank">Fale no WhatsApp</a>
+</header>
+
+<section id="sobre">
+<h2>Sobre a CarVic Tech</h2>
+<p>Especializada em manutenção, upgrades e suporte técnico para computadores e notebooks.</p>
+</section>
+
+<section id="servicos">
+<h2>Nossos Serviços</h2>
+<div class="cards">
+<div class="card">🔧 Manutenção de computadores e notebooks</div>
+<div class="card">⚙️ Formatação e instalação do Windows</div>
+<div class="card">🧹 Limpeza preventiva e troca de pasta térmica</div>
+<div class="card">🚀 Upgrade de hardware (SSD, memória RAM e outros)</div>
+<div class="card">📥 Instalação e configuração de programas</div>
+<div class="card">🛡️ Remoção de vírus e otimização do sistema</div>
+<div class="card">🌐 Configuração de redes e Wi‑Fi</div>
+<div class="card">🖥️ Montagem de computadores personalizados</div>
+<div class="card">💬 Suporte técnico presencial e remoto</div>
+</div>
+</section>
+
+<section>
+<h2>Diferenciais</h2>
+<div class="cards">
+<div class="card">✔ Atendimento rápido</div>
+<div class="card">✔ Preços justos</div>
+<div class="card">✔ Garantia dos serviços</div>
+<div class="card">✔ Atendimento personalizado</div>
+</div>
+</section>
+
+<section id="contato">
+<h2>Contato</h2>
+<p>📱 WhatsApp: (31) 99071-7419</p>
+<p>📍 Vale Verde - Minas Gerais</p>
+<p>🕒 Segunda a Sexta: 07h00 às 14h00<br>Sábado: 08h00 às 12h00</p>
+</section>
+
+<footer>© 2026 CarVic Tech - Todos os direitos reservados.</footer>
+
+<button class="dark" onclick="document.body.classList.toggle('light')">🌙/☀️</button>
+</body>
+</html>
