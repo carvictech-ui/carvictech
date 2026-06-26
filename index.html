@@ -1,46 +1,60 @@
-<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CarVic Tech</title>
 <style>
-html{scroll-behavior:smooth}body{margin:0;font-family:Arial;background:#08111f;color:#fff;overflow-x:hidden}
-#bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(circle,#123,#08111f)}
-.p{position:absolute;width:3px;height:3px;background:#6cf;border-radius:50%;animation:f 12s linear infinite}
-@keyframes f{from{transform:translateY(100vh)}to{transform:translateY(-10vh)}}
-header{padding:80px 20px;text-align:center}
-h1{font-size:3em}.cursor{border-right:2px solid #fff;animation:b .8s step-end infinite}@keyframes b{50%{border-color:transparent}}
-section{max-width:1100px;margin:auto;padding:40px 20px;opacity:0;transform:translateY(40px);transition:.7s}
-.show{opacity:1;transform:none}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card{background:#16233a;padding:18px;border-radius:10px}
-.carousel{display:flex;overflow:auto;gap:12px}.slide{min-width:250px;background:#16233a;padding:40px 20px;border-radius:10px}
-.faq details{background:#16233a;margin:10px 0;padding:10px;border-radius:8px}
-.brands{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:10px;text-align:center}
-.badges span{display:inline-block;background:#0a58ca;padding:8px 14px;border-radius:20px;margin:5px}
-#top{position:fixed;right:20px;bottom:20px;padding:10px 14px}
-</style></head><body><div id='bg'></div>
-<header><h1><span id='type'></span><span class='cursor'></span></h1><p>Tecnologia que você pode confiar.</p></header>
-<section><h2>Serviços</h2><div class='cards'><div class='card'>🔧 Manutenção</div><div class='card'>⚙️ Formatação</div><div class='card'>🧹 Limpeza</div><div class='card'>🚀 Upgrade</div><div class='card'>🛡️ Remoção de Vírus</div><div class='card'>🌐 Redes Wi‑Fi</div></div></section>
-<section><h2>Carrossel</h2><div class='carousel'><div class='slide'>Limpeza Preventiva</div><div class='slide'>Upgrade SSD</div><div class='slide'>Montagem de PC</div><div class='slide'>Suporte Técnico</div></div></section>
-<section class='faq'><h2>FAQ</h2>
-<details><summary>Quanto tempo leva uma formatação?</summary><p>Normalmente entre 2 e 4 horas.</p></details>
-<details><summary>Vocês atendem em domicílio?</summary><p>Sim, conforme disponibilidade.</p></details>
-</section>
-<section><h2>Marcas Atendidas</h2><div class='brands'><div>Dell</div><div>HP</div><div>Lenovo</div><div>Acer</div><div>ASUS</div><div>Samsung</div></div></section>
-<section><h2>Selos</h2><div class='badges'><span>Atendimento Rápido</span><span>Garantia</span><span>Qualidade</span></div></section>
-<button id='top' onclick='scrollTo({top:0,behavior:"smooth"})'>⬆ Topo</button>
-<script>
-const t="CarVic Tech";let i=0;function w(){if(i<t.length){type.textContent+=t[i++];setTimeout(w,120)}}w();
-for(let i=0;i<120;i++){let s=document.createElement('div');s.className='p';s.style.left=Math.random()*100+'vw';s.style.top=Math.random()*100+'vh';s.style.animationDelay=Math.random()*12+'s';bg.appendChild(s);}
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}));document.querySelectorAll('section').forEach(s=>obs.observe(s));
-</script>
+  body{font-family:Arial;background:#08111f;color:#fff;margin:0}
+  section{padding:40px;max-width:1000px;margin:auto}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+  .card{background:#16233a;padding:15px;border-radius:10px}
+  footer{text-align:center;background:#0b1628;padding:30px}
+  input, textarea{width:100%;padding:10px;margin-bottom:15px;border:none;border-radius:5px}
+  button{padding:12px 20px;background:#25D366;color:#fff;border:none;border-radius:5px;cursor:pointer}
+</style>
+</head>
+<body>
 
-<footer style="background:#0b1628;color:#fff;padding:40px 20px;text-align:center;margin-top:40px">
+<section>
+  <h1>CarVic Tech</h1>
+  <p>Tecnologia que você pode confiar.</p>
+</section>
+
+<section>
+  <h2>🖼️ Galeria de Serviços</h2>
+  <div class='cards'>
+    <div class='card'>🧹 Limpeza de computador</div>
+    <div class='card'>🚀 Troca de SSD</div>
+    <div class='card'>💾 Instalação de memória RAM</div>
+    <div class='card'>🔌 Organização de cabos</div>
+    <div class='card'>🖥️ Montagem de computadores</div>
+  </div>
+</section>
+
+<section>
+  <h2>📞 Contato</h2>
+  <form>
+    <input type="text" placeholder="👤 Nome">
+    <input type="tel" placeholder="📱 Número de Telefone">
+    <input type="email" placeholder="📧 E-mail">
+    <textarea placeholder="💬 Mensagem"></textarea>
+    <button>Enviar</button>
+  </form>
+
+  <p>📱 <a href="https://wa.me/5531990717419">WhatsApp (31) 99071-7419</a></p>
+  <p>📧 <a href="mailto:contato@carvictech.com">contato@carvictech.com</a></p>
+  <p>📍 Vale Verde - Minas Gerais</p>
+  <p>🕒 Seg-Sex 07:00–14:00 | Sáb 08:00–12:00</p>
+</section>
+
+<a href="https://wa.me/5531990717419" style="position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;padding:16px;border-radius:50%;text-decoration:none">💬</a>
+
+<footer>
   <h2>CarVic Tech</h2>
-  <p><strong>Tecnologia que você pode confiar.</strong></p>
-  <p>📱 <a href="https://wa.me/5531990717419" style="color:#4fc3ff;text-decoration:none;">(31) 99071-7419</a></p>
-  <p>📧 <a href="mailto:contato@carvictech.com" style="color:#4fc3ff;text-decoration:none;">contato@carvictech.com</a><br><br>📍 Vale Verde - Minas Gerais</p>
-  <hr style="border:0;border-top:1px solid #2b4f7a;max-width:400px">
-  <p>© 2026 CarVic Tech</p>
-  <p>Todos os direitos reservados.</p>
+  <p>Tecnologia que você pode confiar.</p>
+  <p>©2026</p>
 </footer>
 
-
-</body></html>
+</body>
+</html>
