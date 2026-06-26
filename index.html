@@ -30,4 +30,17 @@ section{max-width:1100px;margin:auto;padding:40px 20px;opacity:0;transform:trans
 const t="CarVic Tech";let i=0;function w(){if(i<t.length){type.textContent+=t[i++];setTimeout(w,120)}}w();
 for(let i=0;i<120;i++){let s=document.createElement('div');s.className='p';s.style.left=Math.random()*100+'vw';s.style.top=Math.random()*100+'vh';s.style.animationDelay=Math.random()*12+'s';bg.appendChild(s);}
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}));document.querySelectorAll('section').forEach(s=>obs.observe(s));
-</script></body></html>
+</script>
+
+<footer style="background:#0b1628;color:#fff;padding:40px 20px;text-align:center;margin-top:40px">
+  <h2>CarVic Tech</h2>
+  <p><strong>Tecnologia que você pode confiar.</strong></p>
+  <p>📱 <a href="https://wa.me/5531990717419" style="color:#4fc3ff;text-decoration:none;">(31) 99071-7419</a></p>
+  <p>📧 <a href="mailto:contato@carvictech.com" style="color:#4fc3ff;text-decoration:none;">contato@carvictech.com</a><br><br>📍 Vale Verde - Minas Gerais</p>
+  <hr style="border:0;border-top:1px solid #2b4f7a;max-width:400px">
+  <p>© 2026 CarVic Tech</p>
+  <p>Todos os direitos reservados.</p>
+</footer>
+
+
+</body></html>
