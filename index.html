@@ -4,9 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CarVic Tech</title>
+<!-- Fonte moderna -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+<!-- Ícones Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: #0a0f1c;
     color: #fff;
     margin: 0;
@@ -20,14 +25,17 @@
     text-align: center;
   }
   header h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     color: #4da6ff;
     text-shadow: 2px 2px 8px #000;
+    animation: fadeInDown 1.5s ease;
   }
   section {
     padding: 40px;
     max-width: 1100px;
     margin: auto;
+    animation: fadeInUp 1.5s ease;
   }
   .cards {
     display: grid;
@@ -39,10 +47,11 @@
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
   }
   .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
   }
   .precos {
     display: grid;
@@ -54,9 +63,27 @@
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    transition: transform 0.3s;
+  }
+  .plano:hover {
+    transform: scale(1.05);
   }
   .plano h3 {
+    font-family: 'Montserrat', sans-serif;
     color: #4da6ff;
+  }
+  .plano button {
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: #4da6ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .plano button:hover {
+    background: #1e90ff;
   }
   footer {
     text-align: center;
@@ -100,6 +127,14 @@
     70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
     100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
   }
+  @keyframes fadeInUp {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  @keyframes fadeInDown {
+    from {opacity: 0; transform: translateY(-30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
 </style>
 </head>
 <body>
@@ -111,11 +146,11 @@
 <section>
   <h2>🖼️ Galeria de Serviços</h2>
   <div class="cards">
-    <div class="card">🧹 Limpeza de computador</div>
-    <div class="card">🚀 Troca de SSD</div>
-    <div class="card">💾 Instalação de memória RAM</div>
-    <div class="card">🔌 Organização de cabos</div>
-    <div class="card">🖥️ Montagem de computadores</div>
+    <div class="card"><i class="fas fa-broom"></i> Limpeza de computador</div>
+    <div class="card"><i class="fas fa-rocket"></i> Troca de SSD</div>
+    <div class="card"><i class="fas fa-memory"></i> Instalação de memória RAM</div>
+    <div class="card"><i class="fas fa-plug"></i> Organização de cabos</div>
+    <div class="card"><i class="fas fa-desktop"></i> Montagem de computadores</div>
   </div>
 </section>
 
@@ -126,16 +161,19 @@
       <h3>Básico</h3>
       <p>R$ 100</p>
       <p>Limpeza e otimização</p>
+      <button>Contratar</button>
     </div>
     <div class="plano">
       <h3>Intermediário</h3>
       <p>R$ 80 a R$ 200</p>
       <p>Troca de SSD + RAM</p>
+      <button>Contratar</button>
     </div>
     <div class="plano">
       <h3>Avançado</h3>
       <p>R$ 500</p>
       <p>Montagem completa</p>
+      <button>Contratar</button>
     </div>
   </div>
 </section>
@@ -156,7 +194,7 @@
   </form>
 </section>
 
-<a href="https://wa.me/5531990717419" class="whatsapp-btn" aria-label="Abrir WhatsApp">💬</a>
+<a href="https://wa.me/5531990717419" class="whatsapp-btn" aria-label="Abrir WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
 <footer>
   <h2>CarVic Tech</h2>
