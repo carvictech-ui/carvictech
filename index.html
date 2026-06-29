@@ -1,54 +1,171 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CarVic Tech</title>
 <style>
-  body{font-family:Arial;background:#08111f;color:#fff;margin:0}
-  section{padding:40px;max-width:1000px;margin:auto}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
-  .card{background:#16233a;padding:15px;border-radius:10px}
-  footer{text-align:center;background:#0b1628;padding:30px}
-  input, textarea{width:100%;padding:10px;margin-bottom:15px;border:none;border-radius:5px}
-  button{padding:12px 20px;background:#25D366;color:#fff;border:none;border-radius:5px;cursor:pointer}
+  body {
+    font-family: Arial, sans-serif;
+    background: #0a0f1c;
+    color: #fff;
+    margin: 0;
+  }
+  header {
+    background: url('banner.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 3rem;
+    color: #4da6ff;
+    text-shadow: 2px 2px 8px #000;
+  }
+  section {
+    padding: 40px;
+    max-width: 1100px;
+    margin: auto;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+  }
+  .card {
+    background: #16233a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .precos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+  }
+  .plano {
+    background: #16233a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .plano h3 {
+    color: #4da6ff;
+  }
+  footer {
+    text-align: center;
+    background: #0b1628;
+    padding: 30px;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+  }
+  button {
+    padding: 12px 20px;
+    background: #4da6ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  button:hover {
+    background: #1e90ff;
+  }
+  /* Botão WhatsApp com pulsação */
+  .whatsapp-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #25D366;
+    color: #fff;
+    padding: 18px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+    70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+  }
 </style>
 </head>
 <body>
 
-<section>
+<header>
   <h1>CarVic Tech</h1>
-  <p>Tecnologia que você pode confiar.</p>
-</section>
+</header>
 
 <section>
   <h2>🖼️ Galeria de Serviços</h2>
-  <div class='cards'>
-    <div class='card'>🧹 Limpeza de computador</div>
-    <div class='card'>🚀 Troca de SSD</div>
-    <div class='card'>💾 Instalação de memória RAM</div>
-    <div class='card'>🔌 Organização de cabos</div>
-    <div class='card'>🖥️ Montagem de computadores</div>
+  <div class="cards">
+    <div class="card">🧹 Limpeza de computador</div>
+    <div class="card">🚀 Troca de SSD</div>
+    <div class="card">💾 Instalação de memória RAM</div>
+    <div class="card">🔌 Organização de cabos</div>
+    <div class="card">🖥️ Montagem de computadores</div>
   </div>
+</section>
+
+<section>
+  <h2>⭐ Avaliações de Clientes</h2>
+  <div class="cards">
+    <div class="card">"Serviço excelente, meu PC ficou novo!" – João</div>
+    <div class="card">"Atendimento rápido e confiável." – Maria</div>
+    <div class="card">"Recomendo para todos!" – Pedro</div>
+  </div>
+</section>
+
+<section>
+  <h2>💰 Tabela de Preços</h2>
+  <div class="precos">
+    <div class="plano">
+      <h3>Básico</h3>
+      <p>R$ 100</p>
+      <p>Limpeza e otimização</p>
+    </div>
+    <div class="plano">
+      <h3>Intermediário</h3>
+      <p>R$ 250</p>
+      <p>Troca de SSD + RAM</p>
+    </div>
+    <div class="plano">
+      <h3>Avançado</h3>
+      <p>R$ 500</p>
+      <p>Montagem completa</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>📍 Localização</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
 </section>
 
 <section>
   <h2>📞 Contato</h2>
   <form>
-    <input type="text" placeholder="👤 Nome">
-    <input type="tel" placeholder="📱 Número de Telefone">
-    <input type="email" placeholder="📧 E-mail">
-    <textarea placeholder="💬 Mensagem"></textarea>
+    <input type="text" placeholder="👤 Nome" required>
+    <input type="tel" placeholder="📱 Número de Telefone" required>
+    <input type="email" placeholder="📧 E-mail" required>
+    <textarea placeholder="💬 Mensagem" required></textarea>
     <button>Enviar</button>
   </form>
-
-  <p>📱 <a href="https://wa.me/5531990717419">WhatsApp (31) 99071-7419</a></p>
-  <p>📧 <a href="mailto:contato@carvictech.com">contato@carvictech.com</a></p>
-  <p>📍 Vale Verde - Minas Gerais</p>
-  <p>🕒 Seg-Sex 07:00–14:00 | Sáb 08:00–12:00</p>
 </section>
 
-<a href="https://wa.me/5531990717419" style="position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;padding:16px;border-radius:50%;text-decoration:none">💬</a>
+<a href="https://wa.me/5531990717419" class="whatsapp-btn" aria-label="Abrir WhatsApp">💬</a>
 
 <footer>
   <h2>CarVic Tech</h2>
