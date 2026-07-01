@@ -83,6 +83,25 @@
   .plano a:hover {
     background: #1e90ff;
   }
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+  }
+  .galeria div {
+    background: #16233a;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .galeria img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  .galeria img:hover {
+    transform: scale(1.05);
+  }
   footer {
     text-align: center;
     background: #0b1628;
@@ -133,7 +152,6 @@
     <div class="card"><i class="fas fa-memory"></i> Instalação de memória RAM</div>
     <div class="card"><i class="fas fa-desktop"></i> Montagem de computadores</div>
     <div class="card"><i class="fas fa-cogs"></i> Formatação + Windows</div>
-    <!-- Novo card Geek Uninstaller -->
     <div class="card">
       <i class="fas fa-tools"></i> 
       <a href="https://geekuninstaller.com/" target="_blank" style="color:#4da6ff;text-decoration:none;">
@@ -146,58 +164,26 @@
 <section>
   <h2>💰 Tabela de Preços</h2>
   <div class="precos">
-    <div class="plano">
-      <h3>Limpeza do computador</h3>
-      <p>R$ 50 – 80</p>
-      <a href="https://wa.me/5531990717419?text=Quero%20contratar%20Limpeza%20do%20computador">Contratar</a>
-    </div>
-    <div class="plano">
-      <h3>Troca de SSD</h3>
-      <p>R$ 50 – 80</p>
-      <a href="https://wa.me/5531990717419?text=Quero%20contratar%20Troca%20de%20SSD">Contratar</a>
-    </div>
-    <div class="plano">
-      <h3>Instalação de RAM</h3>
-      <p>R$ 30 – 50</p>
-      <a href="https://wa.me/5531990717419?text=Quero%20contratar%20Instalação%20de%20RAM">Contratar</a>
-    </div>
-    <div class="plano">
-      <h3>Formatação + Windows</h3>
-      <p>R$ 80 – 120</p>
-      <a href="https://wa.me/5531990717419?text=Quero%20contratar%20Formatação%20com%20Windows">Contratar</a>
-    </div>
-    <div class="plano">
-      <h3>Montagem completa do PC</h3>
-      <p>R$ 120 – 180</p>
-      <a href="https://wa.me/5531990717419?text=Quero%20contratar%20Montagem%20completa%20do%20PC">Contratar</a>
-    </div>
-    <div class="plano">
-      <h3>Montagem + Windows + drivers</h3>
-      <p>R$ 180 – 250</p>
-      <a href="https://wa.me/5531990717419?text=Quero%20contratar%20Montagem%20com%20Windows%20e%20drivers">Contratar</a>
-    </div>
+    <div class="plano"><h3>Limpeza do computador</h3><p>R$ 50 – 80</p><a href="https://wa.me/5531990717419?text=Quero%20contratar%20Limpeza%20do%20computador">Contratar</a></div>
+    <div class="plano"><h3>Troca de SSD</h3><p>R$ 50 – 80</p><a href="https://wa.me/5531990717419?text=Quero%20contratar%20Troca%20de%20SSD">Contratar</a></div>
+    <div class="plano"><h3>Instalação de RAM</h3><p>R$ 30 – 50</p><a href="https://wa.me/5531990717419?text=Quero%20contratar%20Instalação%20de%20RAM">Contratar</a></div>
+    <div class="plano"><h3>Formatação + Windows</h3><p>R$ 80 – 120</p><a href="https://wa.me/5531990717419?text=Quero%20contratar%20Formatação%20com%20Windows">Contratar</a></div>
+    <div class="plano"><h3>Montagem completa do PC</h3><p>R$ 120 – 180</p><a href="https://wa.me/5531990717419?text=Quero%20contratar%20Montagem%20completa%20do%20PC">Contratar</a></div>
+    <div class="plano"><h3>Montagem + Windows + drivers</h3><p>R$ 180 – 250</p><a href="https://wa.me/5531990717419?text=Quero%20contratar%20Montagem%20com%20Windows%20e%20drivers">Contratar</a></div>
+  </div>
+</section>
+
+<section>
+  <h2>📸 Exemplos de Serviços</h2>
+  <div class="galeria">
+    <div><img src="cpu-dust.jpg" alt="Limpeza de cooler e CPU"><p>Limpeza de computador</p></div>
+    <div><img src="hdd-vs-ssd.jpg" alt="Troca de HDD para SSD"><p>Troca de SSD</p></div>
+    <div><img src="ram-install.jpg" alt="Instalação de memória RAM"><p>Instalação de RAM</p></div>
+    <div><img src="pc-assembly.jpg" alt="Montagem de computadores"><p>Montagem de computadores</p></div>
+    <div><img src="windows-install.jpg" alt="Formatação e instalação do Windows"><p>Formatação + Windows</p></div>
   </div>
 </section>
 
 <section>
   <h2>📞 Contato</h2>
-  <form style="display:flex;flex-direction:column;gap:15px;max-width:600px;margin:auto;">
-    <input type="text" placeholder="Nome Completo" required>
-    <input type="tel" placeholder="Número de Telefone" required>
-    <textarea rows="6" placeholder="Descreva o problema..." required></textarea>
-    <button>Solicitar Orçamento</button>
-  </form>
-
-  <br>
-
-  <p>📱 <a href="https://wa.me/5531990717419">WhatsApp</a></p>
-  <p>📧 <a href="mailto:contato@carvictech.com">contato@carvictech.com</a></p>
-  <p>📍 Vale Verde - Minas Gerais</p>
-  <p>🕒 Segunda a Sexta 07:00 às 14:00</p>
-  <p>🕒 Sábado 08:00 às 12:00</p>
-</section>
-
-<a href="https://wa.me/5531990717419" class="whatsapp-btn" aria-label="Abrir WhatsApp"><i class="fab fa-whatsapp"></i></a>
-
-<footer>
-  <h2>CarVic Tech
+  <form style
