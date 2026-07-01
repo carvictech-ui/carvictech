@@ -51,14 +51,6 @@
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
   }
-  .card a {
-    color: #4da6ff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .card a:hover {
-    text-decoration: underline;
-  }
   .precos {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
@@ -117,6 +109,14 @@
     70% { box-shadow: 0 0 0 20px rgba(37,211,102,0); }
     100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
   }
+  @keyframes fadeInUp {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  @keyframes fadeInDown {
+    from {opacity: 0; transform: translateY(-30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
 </style>
 </head>
 <body>
@@ -136,34 +136,68 @@
     <!-- Novo card Geek Uninstaller -->
     <div class="card">
       <i class="fas fa-tools"></i> 
-      <a href="https://geekuninstaller.com/" target="_blank">Geek Uninstaller</a>
+      <a href="https://geekuninstaller.com/" target="_blank" style="color:#4da6ff;text-decoration:none;">
+        Geek Uninstaller
+      </a>
     </div>
   </div>
 </section>
 
 <section>
   <h2>💰 Tabela de Preços</h2>
-  <!-- ... tabela de preços igual ao anterior ... -->
+  <div class="precos">
+    <div class="plano">
+      <h3>Limpeza do computador</h3>
+      <p>R$ 50 – 80</p>
+      <a href="https://wa.me/5531990717419?text=Quero%20contratar%20Limpeza%20do%20computador">Contratar</a>
+    </div>
+    <div class="plano">
+      <h3>Troca de SSD</h3>
+      <p>R$ 50 – 80</p>
+      <a href="https://wa.me/5531990717419?text=Quero%20contratar%20Troca%20de%20SSD">Contratar</a>
+    </div>
+    <div class="plano">
+      <h3>Instalação de RAM</h3>
+      <p>R$ 30 – 50</p>
+      <a href="https://wa.me/5531990717419?text=Quero%20contratar%20Instalação%20de%20RAM">Contratar</a>
+    </div>
+    <div class="plano">
+      <h3>Formatação + Windows</h3>
+      <p>R$ 80 – 120</p>
+      <a href="https://wa.me/5531990717419?text=Quero%20contratar%20Formatação%20com%20Windows">Contratar</a>
+    </div>
+    <div class="plano">
+      <h3>Montagem completa do PC</h3>
+      <p>R$ 120 – 180</p>
+      <a href="https://wa.me/5531990717419?text=Quero%20contratar%20Montagem%20completa%20do%20PC">Contratar</a>
+    </div>
+    <div class="plano">
+      <h3>Montagem + Windows + drivers</h3>
+      <p>R$ 180 – 250</p>
+      <a href="https://wa.me/5531990717419?text=Quero%20contratar%20Montagem%20com%20Windows%20e%20drivers">Contratar</a>
+    </div>
+  </div>
 </section>
 
 <section>
   <h2>📞 Contato</h2>
-  <!-- ... formulário e contatos iguais ao anterior ... -->
+  <form style="display:flex;flex-direction:column;gap:15px;max-width:600px;margin:auto;">
+    <input type="text" placeholder="Nome Completo" required>
+    <input type="tel" placeholder="Número de Telefone" required>
+    <textarea rows="6" placeholder="Descreva o problema..." required></textarea>
+    <button>Solicitar Orçamento</button>
+  </form>
+
+  <br>
+
+  <p>📱 <a href="https://wa.me/5531990717419">WhatsApp</a></p>
+  <p>📧 <a href="mailto:contato@carvictech.com">contato@carvictech.com</a></p>
+  <p>📍 Vale Verde - Minas Gerais</p>
+  <p>🕒 Segunda a Sexta 07:00 às 14:00</p>
+  <p>🕒 Sábado 08:00 às 12:00</p>
 </section>
 
 <a href="https://wa.me/5531990717419" class="whatsapp-btn" aria-label="Abrir WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
 <footer>
-  <h2>CarVic Tech</h2>
-  <p>Tecnologia que você pode confiar.</p>
-  <p>📱 (31) 99071-7419</p>
-  <p>📍 Vale Verde - Minas Gerais</p>
-  <p>© 2026 CarVic Tech</p>
-  <p>Todos os direitos reservados.</p>
-  <p>📧 <a href="mailto:contato@carvictech.com">contato@carvictech.com</a></p>
-  <p>📱 <a href="https://wa.me/5531990717419">WhatsApp</a></p>
-  <p>🔗 <a href="https://geekuninstaller.com/" target="_blank">Geek Uninstaller</a></p>
-</footer>
-
-</body>
-</html>
+  <h2>CarVic Tech
